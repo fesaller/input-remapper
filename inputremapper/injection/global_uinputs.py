@@ -57,6 +57,15 @@ DEFAULT_UINPUTS["keyboard + mouse"] = {
         *DEFAULT_UINPUTS["mouse"][evdev.ecodes.EV_REL],
     ],
 }
+DEFAULT_UINPUTS["keyboard + gamepad"] = {
+    evdev.ecodes.EV_KEY: [
+        *DEFAULT_UINPUTS["keyboard"][evdev.ecodes.EV_KEY],
+        *DEFAULT_UINPUTS["gamepad"][evdev.ecodes.EV_KEY],
+    ],
+    evdev.ecodes.EV_ABS: [
+        *DEFAULT_UINPUTS["gamepad"][evdev.ecodes.EV_ABS],
+    ],
+}
 
 
 def can_default_uinput_emit(target: str, type_: int, code: int) -> bool:
