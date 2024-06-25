@@ -110,6 +110,7 @@ class KnownUinput(str, enum.Enum):
     MOUSE = "mouse"
     GAMEPAD = "gamepad"
     KEYBOARD_MOUSE = "keyboard + mouse"
+    KEYBOARD_GAMEPAD = "keyboard + gamepad"
 
 
 class MappingType(str, enum.Enum):
